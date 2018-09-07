@@ -1,6 +1,7 @@
 
 import thunk from 'redux-thunk';
 import { createStore, applyMiddleware } from 'redux';
-import rootReducer from './reducers';
+import { composeWithDevTools } from 'redux-devtools-extension';
+import animalReducer from './reducers/animals';
 
-export default createStore(rootReducer, applyMiddleware(thunk));
+export default createStore(animalReducer, composeWithDevTools(applyMiddleware(thunk)));
