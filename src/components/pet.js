@@ -27,4 +27,4 @@ const Pet = ({ pet, onAdoptPet, species }) => {
   }
 }
 
-export default Pet
+export default Pet;

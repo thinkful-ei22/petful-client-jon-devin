@@ -19,7 +19,7 @@ export const fetchCatError = error => ({
 
 export const fetchCat = () => dispatch => {
   dispatch(fetchCatRequest())
-  return fetch(`${BASE_URL}/cat`)
+  return fetch(`${BASE_URL}/cats`)
     .then(res => {
       if (!res.ok) {
         if (
@@ -54,7 +54,7 @@ export const deleteCatError = error => ({
 
 export const deleteCat = () => dispatch => {
   dispatch(deleteCatRequest())
-  return fetch(`${BASE_URL}/cat`, {
+  return fetch(`${BASE_URL}/cats`, {
     method: 'DELETE'
   })
     .then(res => {

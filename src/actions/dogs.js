@@ -19,7 +19,7 @@ export const fetchDogError = error => ({
 
 export const fetchDog = () => dispatch => {
   dispatch(fetchDogRequest())
-  return fetch(`${BASE_URL}/dog`)
+  return fetch(`${BASE_URL}/dogs`)
     .then(res => {
       if (!res.ok) {
         if (
@@ -54,7 +54,7 @@ export const deleteDogError = error => ({
 
 export const deleteDog = () => dispatch => {
   dispatch(deleteDogRequest())
-  return fetch(`${BASE_URL}/dog`, {
+  return fetch(`${BASE_URL}/dogs`, {
     method: 'DELETE'
   })
     .then(res => {
